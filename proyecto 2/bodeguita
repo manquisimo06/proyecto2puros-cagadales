@@ -1,0 +1,58 @@
+import os
+import random
+import string
+import importlib
+cerrar=0
+while (cerrar<1):
+    print("Bienvenido a Mi Bodeguita""\n""Del siguiente menu ingrese el numero de la opcion que desea ejecutar""\n")
+    print("1. Agregar Productos""\n""2. Buscar un producto""\n""3. Modificar los datos de un producto""\n""4. Cerrar programa""\n")
+    opc=int(input("ingrese el numero de la opcion""\n"))
+    os.system("cls")
+    if opc>=5:
+        print("Favor ingresar una opcion valida")
+        input()
+        os.system("cls")
+    elif opc==1:
+            print("En este menu podra hacer lo siguiente:""\n")
+            print("1. Ingresar un nuevo producto""\n""2. Actualizar un producto""\n""3. Mostrar el inventario")
+            opcionagregar=int(input("Ingrese el numero de la opcion""\n"))
+            abecedario=('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+            abcd=("")
+            codigo=("")
+            if opcionagregar==1:
+                 salir=0;
+                 while salir<1:
+                      productos=importlib.import_module("agregar_productos")
+                      productos.agregar()
+                      salir=int(input("desea agregar otro producto?""\n""Si necesita salir ingrese un numero mayor a 1"))
+                      os.system("cls")
+            elif opcionagregar==2:
+                 salir=0;
+                 while salir<1:
+                      modif=importlib.import_module("modificar")
+                      modif.modificar()
+                      salir=int(input("desea realizar otra modificasion?""\n""Si necesita salir ingrese un numero mayor a 1"))
+                      os.system("cls")
+            elif opcionagregar==3:
+                 llamandoalinventarioyolepongoelnombrequeyoquieroamisvariablesporquesonmiasxd=importlib.import_module("mostrar_inventario")
+                 llamandoalinventarioyolepongoelnombrequeyoquieroamisvariablesporquesonmiasxd.inventario()
+                 input("\n""Este es su inventario final""\n""para avanzar ingrese cualquier valor""\n")
+                 os.system("cls")
+                 
+    elif opc==2:
+         salir=0;
+         while salir<1:
+               buscar=importlib.import_module("bus")
+               buscar.buscarr()
+               salir=int(input("desea realizar otra busqueda?""\n""Si necesita salir ingrese un numero mayor a 1"))
+               os.system("cls")
+    elif opc==3:
+         salir=0;
+         while salir<1:
+              modif=importlib.import_module("modificar")
+              modif.modificar()
+              salir=int(input("Desea modificar otro producto?""\n""si desea salir ingrese un numero mayor a 1""\n"))
+              os.system("cls")
+    elif opc==4:
+         print("Gracias por usar el programa :)")
+         cerrar=6;
