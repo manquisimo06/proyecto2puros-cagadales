@@ -1,0 +1,2 @@
+A01 Pato_en_Salsa 13.9 Proveedora_De_Patos_S.A 10 A 0
+A02 Pedro 10 Mama 10 A 0
